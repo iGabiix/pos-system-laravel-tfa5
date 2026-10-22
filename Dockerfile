@@ -3,7 +3,7 @@ FROM php:8.2-cli
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends libsqlite3-dev \
+    && apt-get install -y --no-install-recommends libsqlite3-dev unzip git \
     && docker-php-ext-install pdo_sqlite \
     && rm -rf /var/lib/apt/lists/*
 
