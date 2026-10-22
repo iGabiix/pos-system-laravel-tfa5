@@ -8,10 +8,8 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
-COPY composer.json composer.lock ./
-RUN composer install --no-dev --prefer-dist --no-interaction --optimize-autoloader
-
 COPY . .
+RUN composer install --no-dev --prefer-dist --no-interaction --optimize-autoloader
 RUN mkdir -p storage/framework/cache storage/framework/sessions storage/framework/views \
     && chmod -R 775 storage bootstrap/cache
 
