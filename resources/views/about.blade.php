@@ -1,0 +1,2 @@
+@extends('layout', ['title' => 'About | POS System'])
+@section('content')<main class="container"><p class="eyebrow">About the project</p><h1>Built for straightforward account management.</h1><section class="card"><p>This Point-of-Sale application was rebuilt from TFA1 using Laravel and Blade templates.</p><ul><li>Four named routes</li><li>Dedicated controllers</li><li>Static PHP arrays as temporary data sources</li></ul></section></main>@endsection

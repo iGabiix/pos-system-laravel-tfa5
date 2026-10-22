@@ -1,0 +1,2 @@
+@extends('layout', ['title' => 'Customer Accounts | POS System'])
+@section('content')<main class="container"><p class="eyebrow">Account directory</p><h1>Customer Accounts</h1><p><span class="badge">{{ count($customers) }} records</span></p><section class="table-card"><table><thead><tr><th>Full Name</th><th>Email</th><th>Phone</th></tr></thead><tbody>@foreach ($customers as $customer)<tr><td>{{ $customer['full_name'] }}</td><td>{{ $customer['email'] }}</td><td>{{ $customer['phone'] }}</td></tr>@endforeach</tbody></table></section></main>@endsection
